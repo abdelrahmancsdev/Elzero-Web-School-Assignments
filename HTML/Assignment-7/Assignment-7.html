@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+</head>
+<body>
+    <!-- Task 1 -->
+    <form action="" method="get">
+        <input type="hidden" name="token" id="token" value="b92f1fc2fce391ad7af633723afd3055">
+        <label for="email">Email Address</label><br>
+        <input type="email" name="email" id="email" value="o@o.com" readonly><br><br>
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username" placeholder="Type your username" minlength="5" maxlength="20" required autofocus>
+        <br><br>
+        <!-- Task 1 End --> 
+        <!-- Task 2 -->
+        <input type="checkbox" name="skills" id="ps" checked value="Problem Solving"><label for="ps">Problem Solving</label><br>
+        <input type="checkbox" name="skills" id="lt" value="Logical Thinking"><label for="lt">Logical Thinking</label><br>
+        <input type="checkbox" name="skills" id="as" value="Advanced Search"><label for="as">Advanced Search</label><br>
+        <input type="checkbox" name="skills" id="a" value="Analysis"><label for="a">Analysis</label><br>
+        <input type="checkbox" name="skills" id="p" value="Planning"><label for="p">Planning</label>
+        <br><br>
+        <input type="radio" name="job" id="fd" value="Front-End Developer" checked><label for="fd">Front-End Developer</label><br>
+        <input type="radio" name="job" id="bd" value="Back-End Developer"><label for="bd">Back-End Developer</label><br>
+        <input type="radio" name="job" id="ba" value="Business Analyst"><label for="ba">Business Analyst</label><br>
+        <input type="radio" name="job" id="pm" value="Project Manager"><label for="pm">Project Manager</label><br>
+        <input type="radio" name="job" id="sm" value="Scrum Master"><label for="sm">Scrum Master</label><br><br>
+        <!-- Task 2 End -->
+        <!-- Task 3 -->
+        <label for="languages">Choose Language:</label>
+        <select name="languages" id="languages">
+            <optgroup label="PHP">
+                <option value="php5">v5.0</option>
+                <option value="php7">v7.0</option>
+                <option value="php8">v8.0</option>
+            </optgroup>
+            <optgroup label="Python">
+                <option value="py2">v2.0</option>
+                <option value="py3">v3.0</option>
+                <option value="py3.9">v3.9</option>
+            </optgroup>
+        </select>
+        <hr>
+        <textarea name="breif" cols="40" rows="10" placeholder="Write Here Why You Want To Learn Programming"></textarea>
+        <!-- Task 3 End -->
+        <br><br>
+        <!-- rest of task 1 -->
+        <input type="reset" value="Empty">
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
