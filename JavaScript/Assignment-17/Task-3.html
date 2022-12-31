@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 17 - Task 3</title>
+  </head>
+  <body>
+    <div class="our-element">Our Element</div>
+    <p>Paragraph</p>
+    <script>
+      let divElement = document.querySelector("div");
+      let pElement = document.querySelector("p");
+      let beforeElement = document.createElement("div");
+      let afterElement = document.createElement("div");
+      pElement.remove();
+      beforeElement.textContent = "Start";
+      beforeElement.classList.add("start");
+      beforeElement.title = "Start Element";
+      beforeElement.setAttribute("data-value", "Start");
+      afterElement.textContent = "End";
+      afterElement.classList.add("end");
+      afterElement.title = "End Element";
+      afterElement.setAttribute("data-value", "End");
+      divElement.before(beforeElement);
+      divElement.after(afterElement);
+    </script>
+  </body>
+</html>

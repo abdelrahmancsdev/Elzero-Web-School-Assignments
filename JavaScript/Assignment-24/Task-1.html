@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 24 - Task 1</title>
+  </head>
+  <body>
+    <script>
+      let dateNow = new Date();
+      let birthday = new Date("04-01-2000");
+      let age = dateNow - birthday;
+      console.log(`${Math.floor(age / 1000)} Seconds`);
+      console.log(`${Math.floor(age / 1000 / 60)} Minutes`);
+      console.log(`${Math.floor(age / 1000 / 60 / 60)} Hours`);
+      console.log(`${Math.floor(age / 1000 / 60 / 60 / 24)} Days`);
+      console.log(`${Math.floor(age / 1000 / 60 / 60 / 24 / 30)} Months`);
+      console.log(`${Math.floor(age / 1000 / 60 / 60 / 24 / 30 / 12)} Years`);
+      // Needed Output
+
+      // "1247939400 Seconds"
+      // "20798990 Minutes"
+      // "346650 Hours"
+      // "14444 Days"
+      // "481 Months"
+      // "40 Years"
+    </script>
+  </body>
+</html>

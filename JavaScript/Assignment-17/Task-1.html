@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 17 - Task 1</title>
+    <script>
+      // Your Code Here
+      window.onload = () => {
+        let target;
+        document.querySelectorAll("a").forEach((elm) => {
+          if (elm.classList.contains("open") && elm.textContent == "Elzero") {
+            target = elm;
+          }
+        });
+        target.click();
+      };
+    </script>
+  </head>
+  <body>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html>

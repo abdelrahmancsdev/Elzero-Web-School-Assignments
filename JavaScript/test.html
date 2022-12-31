@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        // Private Property
+        #e;
+        constructor(id, username, eSalary) {
+          this.i = id;
+          this.u = username;
+          this.#e = eSalary;
+        }
+        getSalary() {
+          return parseInt(this.#e);
+        }
+      }
+      class Admin extends User {
+        constructor(id, username, eSalary, permissions) {
+          super(id, username, eSalary);
+          this.permissions = permissions;
+        }
+      }
+      let userOne = new User(100, "Elzero", "5000 Gneh");
+      let adminOne = new Admin(0, "mani", 7000, 1);
+      console.log(userOne.u);
+      console.log(userOne.getSalary() * 0.3);
+      console.log(adminOne.eSalary);
+      console.log(adminOne.getSalary());
+    </script>
+  </body>
+</html>

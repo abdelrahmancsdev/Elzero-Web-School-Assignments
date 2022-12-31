@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigment 11 - Task 1</title>
+  </head>
+  <body>
+    <script>
+      let friends = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+      let index = 0;
+      let counter = 0;
+      let validNames = [];
+      while (counter < friends.length) {
+        // console.log(friends[counter][index]);
+        if (
+          friends[counter][index] !== "A" &&
+          typeof friends[counter] === "string"
+        ) {
+          validNames.push(friends[counter]);
+        }
+        counter++;
+      }
+      counter = index;
+      while (counter < validNames.length) {
+        console.log(`${counter + +true} => ${validNames[counter]}`);
+        counter++;
+      }
+      // Output
+      // "1 => Sayed"
+      // "2 => Mahmoud"
+    </script>
+  </body>
+</html>

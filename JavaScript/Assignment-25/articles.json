@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "author": "Abdelrahman",
+    "category": "Programming",
+    "title": "What is Programming?",
+    "content": "Article 1 Content"
+  },
+  {
+    "id": 2,
+    "author": "Mahmoud",
+    "category": "Programming",
+    "title": "Why JavaScript is the best?",
+    "content": "Article 2 Content"
+  },
+  {
+    "id": 3,
+    "author": "Khaled",
+    "category": "UI/UX",
+    "title": "Best UI/UX Softwares",
+    "content": "Article 3 Content"
+  },
+  {
+    "id": 4,
+    "author": "Khaled",
+    "category": "Graphic Design",
+    "title": "10 Photoshop tricks",
+    "content": "Article 4 Content"
+  },
+  {
+    "id": 5,
+    "author": "Mohamed",
+    "category": "Marketing",
+    "title": "Some sources to learn digital marketing",
+    "content": "Article 5 Content"
+  }
+]

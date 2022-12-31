@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigment 10 - Task 6</title>
+  </head>
+  <body>
+    <script>
+      let start = 0;
+      let swappedName = "elZerO";
+      swappedName = swappedName.split("");
+      for (let i = start; i < swappedName.length; i++) {
+        if (swappedName[i] == swappedName[i].toLowerCase()) {
+          swappedName[i] = swappedName[i].toUpperCase();
+        } else if (swappedName[i] == swappedName[i].toUpperCase()) {
+          swappedName[i] = swappedName[i].toLowerCase();
+        }
+      }
+      swappedName = swappedName.join("");
+      console.log(swappedName);
+      // Output "ELzERo"
+    </script>
+  </body>
+</html>

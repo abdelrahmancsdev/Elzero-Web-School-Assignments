@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 21 - Task 3</title>
+  </head>
+  <body>
+    <script>
+      let myInfo = {
+        username: "Osama",
+        role: "Admin",
+        country: "Egypt",
+      };
+      let mapInfo = new Map(Object.entries(myInfo));
+      console.log(mapInfo);
+      console.log(mapInfo.size);
+      console.log(mapInfo.has("role"));
+      // Needed Output
+      //   Map(3) {'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt'}
+      //   3
+      //   true
+    </script>
+  </body>
+</html>

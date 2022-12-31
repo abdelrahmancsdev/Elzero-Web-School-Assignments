@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 20 - Task 6</title>
+  </head>
+  <body>
+    <script>
+      let chosen = 1;
+
+      let myFriends = [
+        { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+        {
+          title: "Ahmed",
+          age: 25,
+          available: false,
+          skills: ["Python", "Django"],
+        },
+        {
+          title: "Sayed",
+          age: 33,
+          available: true,
+          skills: ["PHP", "Laravel"],
+        },
+      ];
+
+      // Write Your Code Here
+      if (chosen === 1) {
+        [
+          {
+            title,
+            age,
+            available,
+            skills: [, skill],
+          },
+          ,
+        ] = myFriends;
+      } else if (chosen === 2) {
+        [
+          ,
+          {
+            title,
+            age,
+            available,
+            skills: [, skill],
+          },
+        ] = myFriends;
+      } else if (chosen === 3) {
+        [
+          ,
+          ,
+          {
+            title,
+            age,
+            available,
+            skills: [, skill],
+          },
+        ] = myFriends;
+      }
+      available ? (available = "Available") : (available = "Not Available");
+
+      console.log(title);
+      console.log(age);
+      console.log(available);
+      console.log(skill);
+      console.log();
+
+      // "Osama"
+      // 39
+      // "Available"
+      // "CSS"
+
+      // If chosen === 2
+
+      // "Ahmed"
+      // 25
+      // "Not Available"
+      // "Django"
+
+      // If chosen === 3
+
+      // "Sayed"
+      // 33
+      // "Available"
+      // "Laravel"
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 23 - Task 1</title>
+  </head>
+  <body>
+    <script>
+      class Car {
+        constructor(name, model, price) {
+          this.n = name;
+          this.m = model;
+          this.p = price;
+        }
+        run() {
+          return "Car Is Running Now";
+        }
+        stop() {
+          return "Car Is Stopped";
+        }
+      }
+      let carOne = new Car("BMW", 2022, 500000);
+      let carTwo = new Car("Mercedes", 2021, 450000);
+      let carThree = new Car("Tesla", 2022, 650000);
+
+      console.log(
+        `Car one name is ${carOne.n} and model is ${carOne.m} and price is ${carOne.p}`
+      );
+      console.log(carOne.run());
+      // Needed Output
+
+      // "Car One Name Is MG And Model Is 2022 And Price Is 420000"
+      // "Car Is Running Now"
+    </script>
+  </body>
+</html>

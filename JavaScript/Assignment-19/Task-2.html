@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 19 - Task 2</title>
+    <style></style>
+  </head>
+  <body>
+    <form method="post">
+      <input type="text" name="name" id="name" placeholder="Username" />
+      <br />
+      <input type="email" name="email" id="email" placeholder="Email Address" />
+      <br />
+      <input type="password" name="pass" id="pass" placeholder="Password" />
+      <br />
+      <select name="role" id="role">
+        <option value="fd">Frontend Developer</option>
+        <option value="bd">Backend Developer</option>
+        <option value="mad">Mobile Applications Developer</option>
+        <option value="id">IoT Developer</option>
+        <option value="md">ML Developer</option>
+      </select>
+    </form>
+    <script>
+      // Select Elements
+      let inputs = document.querySelectorAll("input");
+      let name = document.querySelector("#name");
+      let email = document.querySelector("#email");
+      let pass = document.querySelector("#pass");
+      let role = document.querySelector("#role");
+      // Show Values form Session Storage
+      inputs.forEach((input) => {
+        if (sessionStorage[input.name]) {
+          input.value = sessionStorage[input.name];
+        }
+      });
+      if (sessionStorage.role) {
+        role.value = sessionStorage.role;
+      }
+      //   Add Values to Session Storage
+      inputs.forEach((input) => {
+        input.addEventListener("input", (e) => {
+          sessionStorage[e.currentTarget.name] = e.currentTarget.value;
+        });
+      });
+      role.addEventListener("change", () => {
+        sessionStorage.role = role.value;
+      });
+    </script>
+  </body>
+</html>

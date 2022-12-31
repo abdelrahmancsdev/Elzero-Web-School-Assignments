@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 21 - Task 6</title>
+  </head>
+  <body>
+    <script>
+      let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+      let chars2 = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+      let chars3 = ["Z", "Y", "A", "D", "E", 10, 1];
+
+      function copyWithInNums(arr) {
+        let numArr = arr.filter((num) => typeof num === "number");
+        let strArr = arr.filter((str) => typeof str === "string");
+        let newArr = [...numArr, ...strArr];
+        return console.log(
+          newArr.copyWithin(0, numArr.length, numArr.length * 2)
+        );
+      }
+
+      copyWithInNums(chars);
+      // Needed Output
+      // ["A", "B", "C", "A", "B", "C", "D", "E"]
+      copyWithInNums(chars2);
+      // Needed Output
+      // ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
+      copyWithInNums(chars3);
+      // Needed Output
+      // ["Z", "Y", "Z", "Y", "A", "D", "E"]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigment 9 - Task 6</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = ["A", "C", "X"];
+      let arr2 = ["D", "E", "F", "Y"];
+      let allArrs = [];
+
+      // Your Code Here
+      allArrs.push(arr2[arr2.indexOf("F")].toLowerCase());
+      allArrs.push(arr1[arr1.indexOf("X")].toLowerCase());
+      allArrs.push(arr2[arr2.indexOf("Y")].toLowerCase());
+      allArrs = allArrs.join("");
+      console.log(allArrs); // fxy
+    </script>
+  </body>
+</html>

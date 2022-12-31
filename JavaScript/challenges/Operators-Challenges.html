@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators Challenges</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Challenge 1
+*/
+
+      let a = 10;
+      let b = "20";
+      let c = 80;
+
+      console.log(++a + +b++ + +c++ - +a++);
+      console.log(++a + -b + +c++ - -a++ + +a);
+      console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
+
+      /* First Code
+  [++a] [+] [+b++] [+] [+c++] [-] [+a++]
+  [++a]
+  - Value: 11
+  - Explain: pre increment
+  [+]
+  - Explain: addition operator
+  [+b++]
+  - Value: 20 (will be 21)
+  - Explain: positive operator and post increment
+  [+]
+  - Explain: addition operator
+  [+c++]
+  - Value: 80 (will be 81)
+  - Explain: positive operator and post increment
+  [-]
+  - Explain: negation operator
+  [+a++]
+  - Value: 11 (will be 12)
+  - Explain: positive operator and post increment
+*/
+      /* Second Code
+  [++a] [+] [-b] [+] [+c++] [-] [-a++] [+] [+a]
+  [++a]
+  - Value: 13
+  - Explain: pre increment
+  [+]
+  - Explain: addition operator
+  [-b]
+  - Value: -21
+  - Explain: negative operator
+  [+]
+  - Explain: addition operator
+  [+c++]
+  - Value: 81 (will be 82)
+  - Explain: positive operator and post increment
+  [-]
+  - Explain: negation operator
+  [-a++]
+  - Value: -13 (will be 14)
+  - Explain: negative operator and post increment
+  [+]
+  - Explain: addition operator
+  [+a]
+  - Value: 14
+  - Explain: positive operator
+  */
+      /* Third Code
+  [--c] [+] [+b] [+] [--a] [*] [+b++] [-] [+b] [*] [a] [+] [--a] [-] [+true]
+  [--c]
+  - Value: 81
+  - Explain: pre decriment
+  [+]
+  - Explain: addition operator
+  [+b]
+  - Value: 21
+  - Explain: positive operator
+  [+]
+  - Explain: addition operator
+  [--a]
+  - Value: 13
+  - Explain: pre decriment
+  [*]
+  - Explain: Multiple operator
+  [+b++]
+  - Value: 21 (will be 22)
+  - Explain: positive operator and post increment
+  [-]
+  - Explain: negation operator
+  [+b]
+  - Value: 22
+  - Explain: positive operator
+  [*]
+  - Explain: Multiple operator
+  [a]
+  - Value: 13
+  - Explain: -
+  [+]
+  - Explain: addition operator
+  [--a]
+  - Value: 12
+  - Explain: pre decriment
+  [-]
+  - Explain: negation operator
+  [+true]
+  - Value: 1
+  - Explain: positive operator
+  */
+
+      /*
+  Challenge 2
+*/
+
+      let d = "-100";
+      let e = "20";
+      let f = 30;
+      let g = true;
+
+      // Only Use Variables Value
+      // Do Not Use Variable Twice
+
+      console.log(-d * +e); // 2000
+      console.log(-d + ++e * ++g + ++f); // 173
+    </script>
+  </body>
+</html>

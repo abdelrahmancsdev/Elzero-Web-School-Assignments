@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 16 - Task 3</title>
+    <style>
+      form {
+        width: 500px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        font-family: sans-serif;
+      }
+      input {
+        width: 250px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="number" name="dollar" placeholder="USD Dollar" />
+      <div class="result">{0} USD Dollar = {0} Egyptian Pound</div>
+    </form>
+    <script>
+      // Select Elements
+      let input = document.querySelector("input");
+      let result = document.querySelector(".result");
+
+      // add the Event
+      input.oninput = (e) => {
+        result.textContent = `{${
+          input.value ? input.value : 0
+        }} USD Dollar = {${
+          input.value ? (input.value * 15.6).toFixed(2) : 0
+        }} Egyptian Pound`;
+      };
+    </script>
+  </body>
+</html>

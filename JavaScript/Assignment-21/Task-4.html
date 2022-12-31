@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 21 - Task 4</title>
+  </head>
+  <body>
+    <script>
+      let theNumber = 100020003000;
+      console.log(
+        Number(
+          [...new Set([...String(theNumber)])]
+            .filter((num) => num != 0)
+            .join("")
+        )
+      );
+      // Needed Output
+      //   123
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 26 - Task 1</title>
+  </head>
+  <body>
+    <script>
+      let myPromise = new Promise((resolve, reject) => {
+        let req = new XMLHttpRequest();
+        req.open("GET", "./articles.json");
+        req.onload = function () {
+          if (req.readyState == 4 && req.status == 200) {
+            resolve(JSON.parse(req.responseText));
+          } else {
+            reject(Error("No Articles Found"));
+          }
+        };
+        req.send();
+      });
+      myPromise.then(
+        (resolved) => {
+          resolved.length = 5;
+          return resolved;
+        },
+        (rejected) => rejected
+      );
+      myPromise.then(
+        (resolved) => {
+          resolved.forEach((article) => {
+            let div = document.createElement("div");
+            div.innerHTML = `
+            <h3>${article.title}</h3>
+            <p>${article.description}</p>
+              `;
+            document.body.appendChild(div);
+          });
+        },
+        (rejected) => console.log(rejected)
+      );
+    </script>
+  </body>
+</html>

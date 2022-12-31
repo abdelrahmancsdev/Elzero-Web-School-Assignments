@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 19 - Task 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        font-family: sans-serif;
+      }
+      .custom-text {
+        font-family: "Open Sans", sans-serif;
+        color: black;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Options</h1>
+    <label for="fonts">Font Family</label>
+    <select name="fontFamily" id="fonts">
+      <option value="'Open Sans', sans-serif">Open</option>
+      <option value="Cairo, sans-serif">Cairo</option>
+      <option value="Roboto, sans-serif">Roboto</option>
+    </select>
+    <label for="colors">Color</label>
+    <select name="color" id="colors">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+      <option value="orange">Orange</option>
+    </select>
+    <label for="font-size">Font Size</label>
+    <select name="fontSize" id="font-sizes">
+      <option value="16px">16px</option>
+      <option value="18px">18px</option>
+      <option value="20px">20px</option>
+      <option value="22px">22px</option>
+      <option value="24px">24px</option>
+      <option value="26px">26px</option>
+      <option value="28px">28px</option>
+      <option value="30px">30px</option>
+    </select>
+    <p class="custom-text">Hello World!</p>
+    <script>
+      // Select Elements
+      let selects = document.querySelectorAll("select");
+      let fontSelect = document.querySelector("#fonts");
+      let colorSelect = document.querySelector("#colors");
+      let sizeSelect = document.querySelector("#font-sizes");
+      let customText = document.querySelector(".custom-text");
+
+      //   Style Text with local storage
+      (function localStyle() {
+        if (localStorage.fontFamily) {
+          customText.style.fontFamily = localStorage.fontFamily;
+          customText.style.fontFamily = localStorage.fontFamily;
+          fontSelect.value = localStorage.fontFamily;
+        }
+        if (localStorage.color) {
+          customText.style.color = localStorage.color;
+          colorSelect.value = localStorage.color;
+        }
+        if (localStorage.fontSize) {
+          customText.style.fontSize = localStorage.fontSize;
+          sizeSelect.value = localStorage.fontSize;
+        }
+      })();
+
+      //   Style Text on Change
+      selects.forEach((select) => {
+        select.addEventListener("change", (e) => {
+          customText.style[e.currentTarget.name] = e.currentTarget.value;
+          localStorage[e.currentTarget.name] = e.currentTarget.value;
+        });
+      });
+    </script>
+  </body>
+</html>

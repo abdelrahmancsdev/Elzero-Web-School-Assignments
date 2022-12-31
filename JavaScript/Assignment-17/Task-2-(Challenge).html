@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 17 - Task 2</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .assign {
+        text-align: center;
+        padding-top: 20px;
+      }
+      .assign input {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ddd;
+      }
+      .assign input:focus {
+        outline: none;
+        border-color: #ccc;
+      }
+      .assign [title="Current"] {
+        padding: 20px;
+        margin: 10px auto;
+        width: 610px;
+        background-color: #f1f0f0;
+      }
+      .assign .classes-list {
+        padding: 20px;
+        margin: 10px auto;
+        width: 610px;
+        background-color: #f1f0f0;
+      }
+      .assign .classes-list h5 {
+        margin: 0 0 10px;
+        text-align: left;
+      }
+      .assign .classes-list div span {
+        background-color: #ff5722;
+        padding: 6px 10px 8px;
+        margin-right: 5px;
+        border-radius: 6px;
+        color: white;
+        display: inline-flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="assign">
+      <input type="text" class="classes-to-add" placeholder="Add Classes" />
+      <input
+        type="text"
+        class="classes-to-remove"
+        placeholder="Remove Classes"
+      />
+      <div class="element current" title="Current">Current Element</div>
+      <div class="classes-list">
+        <h5>Current Element Class Lists</h5>
+        <div></div>
+      </div>
+    </div>
+    <script>
+      // Select Elements
+      let add = document.querySelector(".classes-to-add");
+      let remove = document.querySelector(".classes-to-remove");
+      let element = document.querySelector("[title=Current]");
+      let classList = document.querySelector(".classes-list div");
+
+      // Show Classes Function
+      function showClasses() {
+        classList.innerHTML = "";
+        if (element.classList != "") {
+          [...element.classList].sort().forEach((item) => {
+            let span = document.createElement("span");
+            span.textContent = item;
+            classList.appendChild(span);
+          });
+        } else {
+          classList.innerHTML = "No Classes To Show";
+        }
+      }
+      showClasses();
+      // Add classes Event
+      add.addEventListener("blur", () => {
+        if (add.value != "") {
+          add.value.split(" ").forEach((item) => {
+            element.classList.add(item.toLowerCase());
+          });
+          showClasses();
+          add.value = "";
+        }
+      });
+      // Remove classes Event
+      remove.addEventListener("blur", () => {
+        if (remove.value != "") {
+          remove.value.split(" ").forEach((item) => {
+            element.classList.remove(item.toLowerCase());
+          });
+          showClasses();
+          remove.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

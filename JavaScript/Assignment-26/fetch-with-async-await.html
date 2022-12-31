@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 26 - Task 2</title>
+  </head>
+  <body>
+    <script>
+      async function fetchData() {
+        try {
+          let myData = await fetch("./articles.json");
+          let articles = await myData.json();
+          articles.length = 5;
+          articles.forEach((article) => {
+            let divArticle = document.createElement("div");
+            divArticle.innerHTML = `
+            <h3>${article.title}</h3>
+            <p>${article.description}</p>
+            `;
+            document.body.appendChild(divArticle);
+          });
+        } catch (error) {
+          console.log("Error: " + error);
+        } finally {
+          console.log("Fetch is Done");
+        }
+      }
+      fetchData();
+    </script>
+  </body>
+</html>

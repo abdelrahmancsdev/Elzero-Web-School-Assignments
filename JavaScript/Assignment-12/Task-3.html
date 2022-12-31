@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 12 - Task 3</title>
+  </head>
+  <body>
+    <script>
+      function ageInTime(theAge) {
+        // Your Code Here
+        if (theAge > 10 && theAge < 100) {
+          console.log(theAge * 12 + " Months");
+          console.log(Math.trunc(theAge * 52.177457) + " Weeks");
+          console.log(Math.trunc(theAge * 365.242199) + " Days");
+          console.log(Math.trunc(theAge * 8765.81277) + " Hours");
+          console.log(Math.trunc(theAge * 525948.766) + " Minutes");
+          console.log(theAge * 31556926 + " Seconds");
+        } else {
+          console.log("Age Out Of Range");
+        }
+      }
+
+      // Needed Output
+      ageInTime(110); // Age Out Of Range
+      ageInTime(38); // Months Example => 456 Months
+    </script>
+  </body>
+</html>

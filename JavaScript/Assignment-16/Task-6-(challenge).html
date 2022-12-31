@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 16 - Task 6</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 50px;
+      }
+      input,
+      select {
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      input[type="submit"] {
+        background-color: #673ab7;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      .results {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, calc((100% - 60px) / 3));
+        justify-items: center;
+        gap: 30px;
+        margin-top: 50px;
+      }
+      .box {
+        background-color: #e91e63;
+        color: #fff;
+        width: 100%;
+        min-height: 50px;
+        word-break: break-all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post">
+      <input
+        type="number"
+        name="elements"
+        class="input"
+        placeholder="Number Of Elements"
+      />
+      <input
+        type="text"
+        name="texts"
+        class="input"
+        placeholder="Elements Text"
+      />
+      <select name="type" class="input">
+        <option value="Div">Div</option>
+        <option value="Section">Section</option>
+      </select>
+      <input type="submit" name="create" value="Create" />
+      <div class="results"></div>
+    </form>
+    <script>
+      // Select Elements
+      let form = document.querySelector("form");
+      let num = document.querySelector("[type=number]");
+      let text = document.querySelector("[type=text]");
+      let select = document.querySelector("select");
+      let results = document.querySelector(".results");
+      // Add Event
+      form.onsubmit = (e) => {
+        e.preventDefault();
+        results.innerHTML = "";
+        if (num.value != "" && text.value != "") {
+          for (let i = 1; i <= num.value; i++) {
+            if (select.value == "Div") {
+              results.innerHTML += `<div class="box" title="Element" id="id-${i}">${text.value}</div>`;
+            } else if (select.value == "Section") {
+              results.innerHTML += `<Section class="box" title="Element" id="id-${i}">${text.value}</Section>`;
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
