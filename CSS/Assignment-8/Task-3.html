@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 8 - Task 1</title>
+    <style>
+      .main-list {
+        font-family: sans-serif;
+        width: 400px;
+        padding: 10px;
+        list-style-type: none;
+      }
+      .main-list li {
+        background-color: #eee;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .html-list,
+      .css-list,
+      .js-list {
+        padding-top: 10px;
+      }
+      .html-list li,
+      .css-list li,
+      .js-list li {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+      .css-list {
+        list-style-type: upper-roman;
+      }
+      .js-list {
+        padding-left: 0px;
+        list-style-position: inside;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="main-list">
+      <li>
+        HTML
+        <ol class="html-list" start="10">
+          <li>Slim</li>
+          <li>Pugjs</li>
+          <li>HAML</li>
+        </ol>
+      </li>
+      <li>
+        CSS
+        <ol class="css-list">
+          <li>SASS</li>
+          <li>LESS</li>
+          <li>PostCSS</li>
+        </ol>
+      </li>
+      <li>
+        JavaScript
+        <ul class="js-list">
+          <li>Vuejs</li>
+          <li>Sveltejs</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

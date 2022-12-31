@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 14 - Task 6 (Challenge)</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .team-members {
+        display: grid;
+        grid-template-areas:
+          "om om as sn"
+          "mi mm mm sn"
+          "mi ee ee sn"
+          "ms is gs es";
+        background-color: #eee;
+        padding: 20px;
+        gap: 10px;
+      }
+      .team-members div {
+        padding: 20px;
+        background-color: #fff;
+        border-bottom: 3px solid #f9784f;
+        position: relative;
+      }
+      .team-members div::before {
+        content: '"';
+        color: #999;
+        position: absolute;
+        bottom: -15px;
+        right: 10px;
+        font-family: serif;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 1;
+        transform: rotate(10deg);
+      }
+      .sn,
+      .mm,
+      .is {
+        background-color: #000 !important;
+        color: #fff;
+      }
+      .om {
+        grid-area: om;
+      }
+      .as {
+        grid-area: as;
+      }
+      .sn {
+        grid-area: sn;
+      }
+      .mi {
+        grid-area: mi;
+      }
+      .mm {
+        grid-area: mm;
+      }
+      .ee {
+        grid-area: ee;
+      }
+      .ms {
+        grid-area: ms;
+      }
+      .is {
+        grid-area: is;
+      }
+      .gs {
+        grid-area: gs;
+      }
+      .es {
+        grid-area: es;
+      }
+      .name {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .job {
+        font-weight: bold;
+        color: #999;
+      }
+      p {
+        line-height: 1.6;
+      }
+      .bold {
+        font-weight: bold;
+        margin: 20px 0px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="team-members">
+      <div class="om">
+        <h2 class="name">Osama Mohamed</h2>
+        <span class="job">Full-Stack Developer</span>
+        <p class="bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          voluptatibus, illum et facilis blanditiis deserunt nostrum rem
+          possimus quos! Quaerat possimus harum cupiditate voluptatibus maiores
+          minus exercitationem deserunt laboriosam dolores.
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+          adipisci similique rerum et reiciendis ab dignissimos aspernatur
+          inventore enim voluptates consectetur excepturi, beatae culpa, quaerat
+          nam voluptatum explicabo minus? Iusto. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Assumenda voluptatibus, illum et facilis
+          blanditiis deserunt nostrum rem possimus quos! Quaerat possimus harum
+          cupiditate voluptatibus maiores minus exercitationem deserunt
+          laboriosam dolores.
+        </p>
+      </div>
+      <div class="as">
+        <h2 class="name">Ahmed Sayed</h2>
+        <span class="job">IOS Developer</span>
+        <p class="bold">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+          officia tempora nisi amet sunt possimus accusamus
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+          iusto, harum illo asperiores quod aperiam repellat sed
+        </p>
+      </div>
+      <div class="sn">
+        <h2 class="name">Shady Nabil</h2>
+        <span class="job">Full-Stack Developer</span>
+        <p class="bold">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+          dignissimos neque reprehenderit officia voluptas mollitia aperiam
+          molestias doloremque quis voluptatum sed suscipit, accusantium animi?
+          Placeat veniam sed repellendus laboriosam commodi.
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati
+          laborum veniam corrupti ad quae deleniti, totam tempora quod adipisci!
+          Quod alias nesciunt fugit numquam atque saepe! Provident, obcaecati
+          optio! loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Facilis sequi maxime fuga nemo soluta commodi tenetur nesciunt,
+          provident, vel excepturi fugiat eaque eos sit eum dignissimos, iste
+          magnam veritatis atque? Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Sint nisi, perferendis at quasi est hic laudantium?
+          Unde, vitae. Reprehenderit, suscipit doloremque autem quos quae itaque
+          quibusdam enim. A, nesciunt vitae.
+        </p>
+      </div>
+      <div class="mi">
+        <h2 class="name">Mohamed Ibrahim</h2>
+        <span class="job">.Net Developer</span>
+        <p class="bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim porro
+          culpa quae atque
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati
+          laborum veniam corrupti ad quae deleniti, totam tempora quod adipisci!
+          Quod alias nesciunt fugit numquam atque saepe! Provident, obcaecati
+          optio! loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Facilis sequi maxime fuga nemo soluta commodi tenetur nesciunt,
+          provident, vel excepturi fugiat eaque eos sit eum dignissimos, iste
+          magnam veritatis atque? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Exercitationem vitae porro provident maxime quo ea
+          non deserunt aperiam officia dolores odio, odit reiciendis culpa sunt
+          sint quidem eius corporis aut.
+        </p>
+      </div>
+      <div class="mm">
+        <h2 class="name">Mahmoud Mohamed</h2>
+        <span class="job">Full-Stack Developer</span>
+        <p class="bold">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque rerum
+          tenetur odio incidunt quos, nesciunt expedita corporis eos
+          reprehenderit veniam, repellat, earum voluptates nisi voluptatem quas.
+          Cupiditate quos laudantium est?
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati
+          laborum veniam corrupti ad quae deleniti, totam tempora quod adipisci!
+          Quod alias nesciunt fugit numquam atque saepe! Provident, obcaecati
+          optio! loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Facilis sequi maxime fuga nemo soluta commodi tenetur nesciunt,
+          provident, vel excepturi fugiat eaque eos sit eum dignissimos, iste
+          magnam veritatis atque?
+        </p>
+      </div>
+      <div class="ee">
+        <h2 class="name">Ezz Eldin</h2>
+        <span class="job">Front-End Developer</span>
+        <p class="bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ad ipsum
+          ea vel? Vero amet, praesentium dolorem corrupti voluptatem nostrum
+          iste illum temporibus, impedit nam veritatis nihil incidunt!
+          Perferendis, quis?
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati
+          laborum veniam corrupti ad quae deleniti, totam tempora quod adipisci!
+          Quod alias nesciunt fugit numquam atque saepe! Provident, obcaecati
+          optio! loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Facilis sequi maxime fuga nemo soluta commodi tenetur nesciunt,
+          provident, vel excepturi fugiat eaque eos sit eum dignissimos, iste
+          magnam veritatis atque?
+        </p>
+      </div>
+      <div class="ms">
+        <h2 class="name">Mohmed Sayed</h2>
+        <span class="job">IOS Developer</span>
+        <p class="bold">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          autem reiciendis asperiores modi
+        </p>
+      </div>
+      <div class="is">
+        <h2 class="name">Ibrahim Sayed</h2>
+        <span class="job">IOS Developer</span>
+        <p class="bold">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          autem reiciendis asperiores modi
+        </p>
+      </div>
+      <div class="gs">
+        <h2 class="name">Gamal Sayed</h2>
+        <span class="job">IOS Developer</span>
+        <p class="bold">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          autem reiciendis asperiores modi
+        </p>
+      </div>
+      <div class="es">
+        <h2 class="name">Eman Sayed</h2>
+        <span class="job">IOS Developer</span>
+        <p class="bold">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          autem reiciendis asperiores modi
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

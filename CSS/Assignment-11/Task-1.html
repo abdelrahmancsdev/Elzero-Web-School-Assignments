@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 11 - Task 1</title>
+    <style>
+      .parent {
+        font-family: sans-serif;
+        background-color: #f2f2f4;
+        padding: 20px;
+        margin: 50px auto;
+        text-align: center;
+        width: 500px;
+        height: 200px;
+        -o-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+      }
+      .child {
+        background-color: #dededc;
+        padding: 20px;
+        -o-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -o-transition-delay: 0.5s;
+        -moz-transition-delay: 0.5s;
+        -webkit-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+      }
+      .parent:hover {
+        margin-top: 0px;
+      }
+      .parent:hover .child {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <p>Will Go Up On Hover in Half Second</p>
+      <p class="child">Will Go Down After Half Second</p>
+    </div>
+  </body>
+</html>

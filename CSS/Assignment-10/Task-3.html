@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 10 - Task 3</title>
+    <style>
+      .pricing {
+        font-family: sans-serif;
+        width: 550px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .plan1,
+      .plan2 {
+        float: left;
+        width: calc(50% - 20px);
+        text-align: center;
+        background-color: #eee;
+        padding: 20px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .plan1 {
+        margin-right: 20px;
+        position: relative;
+      }
+      .plan2 {
+        margin-left: 20px;
+      }
+      .plan1::before {
+        content: "";
+        position: absolute;
+        border-right: 1px solid #03a9f4;
+        height: 100%;
+        top: 0px;
+        right: -20px;
+      }
+      .plan1::after {
+        content: "Or";
+        position: absolute;
+        background-color: #03a9f4;
+        color: #fff;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        right: -32px;
+        top: calc(50% - 12px);
+        border-radius: 50%;
+      }
+      h2 {
+        background-color: #03a9f4;
+        color: #fff;
+        padding: 10px;
+        margin: 0px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      p {
+        background-color: #ddd;
+        width: 190px;
+        height: 190px;
+        text-align: center;
+        margin: 20px auto 0px;
+        line-height: 190px;
+        border-radius: 50%;
+        font-size: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricing">
+      <div class="plan1">
+        <h2>Basic</h2>
+        <p>Free</p>
+      </div>
+      <div class="plan2">
+        <h2>Pro</h2>
+        <p>30$</p>
+      </div>
+    </div>
+  </body>
+</html>

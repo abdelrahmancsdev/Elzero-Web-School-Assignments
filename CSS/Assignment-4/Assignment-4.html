@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      /* Task 1 */
+      .title,
+      p {
+        color: green;
+      }
+      .parent .title {
+        color: blue;
+      }
+      .child .title {
+        color: red;
+      }
+      /* Task 2 */
+      div.task2 {
+        width: 400px;
+        color: #fff;
+        background-color: #a52a2a;
+        padding: 20px;
+        margin: 20px;
+        max-height: 30px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Task 1 -->
+    <div class="parent">
+      <div class="child">This Is Child <span class="title">Title</span></div>
+      <span class="title">Child Title</span>
+      <p>Paragraph Content</p>
+    </div>
+    <div class="title">Section Title</div>
+    <!-- Task 2 -->
+    <div class="task2">Title One</div>
+    <div class="task2">Title Two With More Words</div>
+    <div class="task2">Title Three With Many Many Many Words</div>
+    <div class="task2">
+      Title Four With Many Many Many Words Title Four With Many Many Many Words
+      Title Four With Many Many Many Words Title Four With Many Many Many Words
+      Title Four With Many Many Many Words
+    </div>
+  </body>
+</html>

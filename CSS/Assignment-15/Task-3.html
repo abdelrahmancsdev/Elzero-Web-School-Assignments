@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 15 - Task 3</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eee;
+        font-family: serif;
+        font-size: 30px;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+      div::before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 1px);
+        height: calc(100% + 1px);
+        border: 10px solid #e91e63;
+        border-left-color: #fff;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      div::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 21px);
+        height: calc(100% + 21px);
+        border: 10px solid #2196f3;
+        border-right-color: #fff;
+        border-radius: 50%;
+        transition: 0.5s 0.5s;
+      }
+      /* Task 3 */
+      div:hover::before {
+        transform: rotate(180deg);
+      }
+      div:hover::after {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>Elzero</div>
+  </body>
+</html>

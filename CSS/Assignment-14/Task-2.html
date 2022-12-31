@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 14 - Task 2</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+        grid-template-rows: auto 1fr auto;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+      }
+      header,
+      section,
+      aside,
+      footer {
+        padding: 20px;
+      }
+      header {
+        background-color: #03a9f4;
+        grid-column: span 10;
+      }
+      header::before {
+        content: "Header";
+      }
+      section {
+        background-color: #ff5722;
+        grid-column: span 8;
+      }
+      section::before {
+        content: "Section";
+      }
+      aside {
+        background-color: #607d8b;
+        grid-column: span 2;
+      }
+      aside::before {
+        content: "Aside";
+      }
+      footer {
+        background-color: #009688;
+        grid-column: span 10;
+      }
+      footer::before {
+        content: "Footer";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <header></header>
+      <section></section>
+      <aside></aside>
+      <footer></footer>
+    </div>
+  </body>
+</html>

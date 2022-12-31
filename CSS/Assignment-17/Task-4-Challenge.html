@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 17 - Task 4 (Challenge)</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .el {
+        width: 880px;
+        height: 740px;
+        padding: 20px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        grid-auto-columns: 100px;
+      }
+      .e {
+        display: grid;
+        grid-template-areas:
+          "e1 e2 e2 e2"
+          "e1 . . ."
+          "e1 . . ."
+          "e1 e3 e3 e3"
+          "e1 . . ."
+          "e1 . . ."
+          "e1 e4 e4 e4";
+        position: relative;
+      }
+      .e::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #fea604;
+        border: 20px solid #333;
+        top: 0px;
+        right: 0px;
+        animation: e-move linear 3s 3s;
+      }
+      .e div,
+      .l div {
+        background-color: #333;
+      }
+      .e1 {
+        grid-area: e1;
+      }
+      .e2 {
+        grid-area: e2;
+      }
+      .e3 {
+        grid-area: e3;
+      }
+      .e4 {
+        grid-area: e4;
+      }
+      .l {
+        display: grid;
+        grid-template-areas:
+          "l1 . . ."
+          "l1 . . ."
+          "l1 . . ."
+          "l1 . . ."
+          "l1 . . ."
+          "l1 . . ."
+          "l1 l2 l2 l2";
+        position: relative;
+      }
+      .l::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #333;
+        border: 20px solid #333;
+        bottom: 0px;
+        right: 0px;
+        animation: l-move linear 3s;
+      }
+      .l1 {
+        grid-area: l1;
+      }
+      .l2 {
+        grid-area: l2;
+      }
+      @keyframes l-move {
+        10% {
+          background-color: #fea604;
+          transform: translateX(0px);
+        }
+        30% {
+          transform: translateX(-300px);
+        }
+        60% {
+          transform: translateX(-300px) translateY(-600px);
+          background-color: #fea604;
+        }
+        100% {
+          transform: translateX(-300px) translateY(-600px);
+          color: #333;
+        }
+      }
+      @keyframes e-move {
+        5% {
+          transform: translateX(0px);
+        }
+        15% {
+          transform: translateX(-300px);
+        }
+        25% {
+          transform: translateX(-300px) translateY(300px);
+        }
+        35% {
+          transform: translateX(0px) translateY(300px);
+        }
+        45% {
+          transform: translateX(-300px) translateY(300px);
+        }
+        55% {
+          transform: translateX(-300px) translateY(600px);
+        }
+        65% {
+          transform: translateX(0px) translateY(600px);
+        }
+        75% {
+          transform: translateX(-300px) translateY(600px);
+        }
+        85% {
+          transform: translateX(-300px);
+        }
+        90% {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="el">
+      <div class="e">
+        <div class="e1"></div>
+        <div class="e2"></div>
+        <div class="e3"></div>
+        <div class="e4"></div>
+      </div>
+      <div class="l">
+        <div class="l1"></div>
+        <div class="l2"></div>
+      </div>
+    </div>
+  </body>
+</html>

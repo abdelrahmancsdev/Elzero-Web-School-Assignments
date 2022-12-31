@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 19 - Task 2</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      .products {
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 30px;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px auto;
+      }
+      .product {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+      }
+      h2 {
+        color: #0a9a8c;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 1024px) {
+        .products {
+          grid-template-columns: 1fr 1fr;
+        }
+        h2 {
+          color: #ff0000;
+        }
+      }
+      @media (max-width: 768px) {
+        .products {
+          grid-template-columns: 1fr;
+        }
+        h2 {
+          color: #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="products">
+      <div class="product">
+        <h2>Product One</h2>
+        <p>This is Product</p>
+      </div>
+      <div class="product">
+        <h2>Product Two</h2>
+        <p>This is Product</p>
+      </div>
+      <div class="product">
+        <h2>Product Three</h2>
+        <p>This is Product</p>
+      </div>
+      <div class="product">
+        <h2>Product Four</h2>
+        <p>This is Product</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assingnment 17 - Task 3</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        left: calc(50% - 25px);
+        top: calc(50% - 25px);
+        background-color: #eee;
+        border: 5px solid;
+        box-sizing: border-box;
+        border-color: transparent #000 #000;
+        border-radius: 50%;
+        animation: rotate 1s infinite linear reverse;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

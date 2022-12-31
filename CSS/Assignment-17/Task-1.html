@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assingnment 17 - Task 1</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: calc(50% - 25px);
+        top: calc(50% - 25px);
+        /* transform: translate(-50%, -50%); */
+        border: 5px solid;
+        border-color: transparent #e7225e #e7225e;
+        border-radius: 50%;
+        animation: rotate 1s infinite linear;
+      }
+      div:hover {
+        animation-play-state: paused;
+      }
+      div::before,
+      div::after {
+        content: "";
+        position: absolute;
+        border: 5px solid;
+        border-radius: 50%;
+      }
+      div::before {
+        width: 65px;
+        height: 65px;
+        border-color: #319aea #319aea transparent;
+        left: -12.5px;
+        top: -12.5px;
+      }
+      div::after {
+        width: 80px;
+        height: 80px;
+        border-color: #fca300 #fca300 #fca300 transparent;
+        left: -20px;
+        top: -20px;
+      }
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 11 - Task 2</title>
+    <style>
+      div {
+        font-family: sans-serif;
+        width: 400px;
+        margin: auto;
+        font-size: 20px !important;
+        background-color: #eee !important;
+        color: #000 !important;
+        border: none !important;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        user-select: none;
+      }
+      div::first-line {
+        visibility: hidden;
+      }
+      div::before {
+        content: "Elzero";
+        color: #000;
+        position: absolute;
+        left: calc(50% - 30px);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: red;
+        color: white;
+        padding: 20px;
+        border: 1px solid blue;
+        font-size: 80px;
+      "
+    >
+      Hello Div
+    </div>
+  </body>
+</html>

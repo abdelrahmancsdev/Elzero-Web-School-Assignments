@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" conten="width=device-width, initial-scale=1.0" />
+    <title>Assignemnt 16 - Task 5</title>
+    <style>
+      body {
+        margin: 0px;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        perspective: 600px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 30px;
+        transition: 1s;
+        transform-style: preserve-3d;
+      }
+      div::before,
+      div::after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        backface-visibility: hidden;
+      }
+      div::before {
+        content: "Front";
+        background-color: #fa3664;
+        z-index: 1;
+      }
+      div::after {
+        content: "Back";
+        background-color: #1692fc;
+        transform: rotateY(180deg);
+        transform: rotateX(180deg);
+      }
+      div:hover {
+        transform: rotateY(180deg);
+        transform: rotateX(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

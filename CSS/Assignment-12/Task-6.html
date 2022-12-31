@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 12 - Task 6</title>
+    <style>
+      :root {
+        --space: 15px;
+        --bg: #ddd;
+      }
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .page {
+        background-color: #eeeeee;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space);
+        height: 100vh;
+      }
+      header {
+        display: flex;
+        gap: var(--space);
+      }
+      .logo {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ddd;
+      }
+      nav {
+        width: 100%;
+      }
+      .links {
+        list-style: none;
+        gap: var(--space);
+        background-color: #ddd;
+        padding: var(--space);
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .main-area {
+        display: flex;
+        gap: var(--space);
+        height: 100%;
+      }
+      .content {
+        background-color: #ddd;
+        padding: var(--space);
+        width: 70%;
+      }
+      .sidebar {
+        background-color: #ddd;
+        padding: var(--space);
+        width: 30%;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space);
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="logo">Logo</div>
+        <nav>
+          <ul class="links">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-area">
+        <section class="content">Content</section>
+        <aside class="sidebar">Sidebar</aside>
+      </main>
+      <footer class="footer">
+        <p class="copyright">Copyright 2021</p>
+        <p class="design">Designed By Abdelrahman Nasser</p>
+      </footer>
+    </div>
+  </body>
+</html>

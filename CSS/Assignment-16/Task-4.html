@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" conten="width=device-width, initial-scale=1.0" />
+    <title>Assignemnt 16 - Task 4</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        background-color: #607d8b;
+        border-bottom: 5px solid #000;
+      }
+      div::before {
+        content: "";
+        position: absolute;
+        width: 137px;
+        height: 137px;
+        background-color: #000;
+        border-bottom: 5px solid #fff;
+        border-right: 5px solid #fff;
+        transform: rotate(45deg);
+        top: -71px;
+        left: 29px;
+      }
+      div::after {
+        content: "Elzero";
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        color: #fff;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

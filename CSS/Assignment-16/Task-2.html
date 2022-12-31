@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignemnt 16 - Task 2</title>
+    <style>
+      h1 {
+        width: 150px;
+        height: 75px;
+        font-family: serif;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 50px auto;
+        background-color: #009688;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      h1::before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        background-color: #fff;
+        transform: skewX(20deg);
+        left: -20px;
+        top: 0px;
+        z-index: 1;
+      }
+      h1::after {
+        content: "";
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        background-color: #009688;
+        transform: skewX(20deg);
+        left: -35px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Elzero</h1>
+  </body>
+</html>

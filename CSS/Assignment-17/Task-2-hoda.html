@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assingnment 17 - Task 2</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        left: calc(50% - 30px);
+        top: calc(50% - 30px);
+        border: 5px solid;
+        border-color: #319aea #319aea transparent;
+        border-radius: 50%;
+        animation-duration: 1s;
+        animation-name: spin;
+        animation-play-state: paused;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      div::before,
+      div::after {
+        content: "";
+        position: absolute;
+        border: 5px solid;
+        border-radius: 50%;
+      }
+      div::before {
+        width: 65px;
+        height: 65px;
+        border-color: #fca300 #fca300 transparent;
+        left: -12.5px;
+        top: -12.5px;
+        animation-duration: 1.5s;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+        animation-timing-function: linear;
+      }
+      div::after {
+        width: 80px;
+        height: 80px;
+        border-color: #000 #000 transparent;
+        left: -20px;
+        top: -20px;
+        animation-duration: 2s;
+        animation-name: spin;
+        animation-play-state: paused;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      div:hover,
+      div:hover::before,
+      div:hover::after {
+        animation-play-state: running;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

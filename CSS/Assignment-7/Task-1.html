@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 7 - Task 1</title>
+    <style>
+      .parent {
+        font-family: sans-serif;
+        font-weight: bold;
+        width: 1000px;
+        margin: auto;
+        background-color: #eee;
+        text-align: center;
+      }
+      .one,
+      .two,
+      .three,
+      .four {
+        background: #ddd;
+        height: 50px;
+        line-height: 50px;
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+      .one {
+        width: calc(100% - 30px);
+        margin: 15px;
+      }
+      .two {
+        width: calc(100% / 2 - 22.5px);
+      }
+      .three {
+        width: calc(100% / 3 - 20px);
+        margin-right: 15px;
+      }
+      .four {
+        width: calc(100% / 4 - 18.75px);
+      }
+      .first {
+        margin-left: 15px;
+      }
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="one">Full Width</div>
+      <div class="three first">1/3</div>
+      <div class="three">1/3</div>
+      <div class="three">1/3</div>
+      <div class="clear"></div>
+      <div class="two first">1/2</div>
+      <div class="two">1/2</div>
+      <div class="clear"></div>
+      <div class="four first">1/4</div>
+      <div class="four">1/4</div>
+      <div class="four">1/4</div>
+      <div class="four">1/4</div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

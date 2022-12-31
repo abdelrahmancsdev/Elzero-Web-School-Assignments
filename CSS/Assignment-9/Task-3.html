@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 9 - Task 1</title>
+    <style>
+      p {
+        font-family: sans-serif;
+        background-color: #efefef;
+        padding: 20px;
+        margin: 20px auto;
+        position: relative;
+        width: 400px;
+        border-left: 5px solid #e91e63;
+      }
+      p::before {
+        content: "";
+        border: 10px solid;
+        border-color: transparent #e91e63 transparent transparent;
+        position: absolute;
+        left: -25px;
+      }
+      p::after {
+        content: attr(data-person);
+        position: absolute;
+        left: -110px;
+        background-color: #ddd;
+        padding: 10px 15px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+    <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+    <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 10 - Task 1</title>
+    <style>
+      div {
+        font-family: sans-serif;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #eee;
+        border: 3px solid;
+        border-radius: 50%;
+        float: left;
+        margin: 30px;
+        position: relative;
+        counter-increment: element;
+        box-shadow: -5px -5px 0px 0px #e91e63, 5px 5px 0px 0px #2196f3;
+      }
+      div::before {
+        content: "Element";
+      }
+      div::after {
+        content: counter(element);
+        color: #fff;
+        background-color: #000;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        top: -10px;
+        left: calc(50% - 10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 13 - Task 2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        width: 600px;
+        position: relative;
+        margin: auto;
+      }
+      input {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #777;
+        border: none;
+        caret-color: #ff0000;
+      }
+
+      div::before {
+        content: "";
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background-image: linear-gradient(
+          to right,
+          #f46d62 0%,
+          #f46d62 50%,
+          #099a8c 50%,
+          #099a8c 100%
+        );
+        background-color: #000;
+        bottom: 0px;
+        left: 0px;
+      }
+      input:focus {
+        outline: none;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div><input type="text" name="one" id="one" value="Elzero" /></div>
+      <div><input type="text" name="two" id="two" value="Two" /></div>
+      <div><input type="text" name="three" id="three" value="Three" /></div>
+    </form>
+  </body>
+</html>
