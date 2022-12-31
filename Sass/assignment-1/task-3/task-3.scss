@@ -1,0 +1,17 @@
+.content > {
+  .child {
+    padding: 10px;
+  }
+}
+.content {
+  > .child {
+    padding: 10px;
+  }
+}
+.content {
+  > {
+    .child {
+      padding: 10px;
+    }
+  }
+}

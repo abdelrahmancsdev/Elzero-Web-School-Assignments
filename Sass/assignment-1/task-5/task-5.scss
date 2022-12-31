@@ -1,0 +1,10 @@
+// Select every .sibling element after .parent
+.parent + .sibling {
+  margin: auto;
+  margin-top: 10px;
+}
+
+// Select every .sibling element that is after .parent and before .last
+.parent + .sibling ~ .last {
+  padding: 10px;
+}

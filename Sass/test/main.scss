@@ -1,0 +1,65 @@
+@use "./header";
+* {
+  //   font-family: sans-serif;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+$a: 50px;
+div {
+  padding: $a;
+}
+.parent {
+  font-size: bolder;
+  .child {
+    font-weight: bold;
+    .grand {
+      font-size: normal;
+    }
+  }
+  &::before {
+    content: "haha";
+  }
+}
+.element-#{$a} {
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+  padding: {
+    top: 20px;
+    bottom: 10px;
+  }
+  margin: auto {
+    top: 10px;
+    bottom: 20px;
+  }
+}
+%class {
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+.soo {
+  @extend %class;
+  font-size: 18px;
+}
+$theme: "dark";
+.theme {
+  @if $theme == "light" {
+    background-color: white;
+  } @else {
+    background-color: #333;
+  }
+}
+@mixin center($num) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $num;
+  height: $num;
+}
+.center {
+  @include center(100px);
+}

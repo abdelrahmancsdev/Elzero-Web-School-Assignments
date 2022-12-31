@@ -1,0 +1,68 @@
+header {
+  position: fixed;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 1px 1px 1px;
+          box-shadow: 1px 1px 1px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 5px;
+}
+
+div {
+  padding: 50px;
+}
+
+.parent {
+  font-size: bolder;
+}
+.parent .child {
+  font-weight: bold;
+}
+.parent .child .grand {
+  font-size: normal;
+}
+.parent::before {
+  content: "haha";
+}
+
+.element-50px {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.soo {
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.soo {
+  font-size: 18px;
+}
+
+.theme {
+  background-color: #333;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=main.css.map */

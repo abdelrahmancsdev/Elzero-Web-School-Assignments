@@ -1,0 +1,44 @@
+@mixin arrow($dir) {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  @if $dir == "top" {
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-color: red;
+  } @else if $dir == "bottom" {
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-color: red;
+  } @else if $dir == "right" {
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left-color: red;
+  } @else if $dir == "left" {
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right-color: red;
+  }
+}
+.element {
+  &::before {
+    /* Arrow Top */
+    @include arrow("top");
+  }
+  &::before {
+    /* Arrow Bottom */
+    @include arrow("bottom");
+  }
+  &::before {
+    /* Arrow Right */
+    @include arrow("right");
+  }
+  &::before {
+    /* Arrow Left */
+    @include arrow("left");
+  }
+}
